@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Operaciones</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card clientes desaparecer">
+                    <div class="card-body">
+                        <form id="" method="post">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="primerNumero">Primer Numero</label>
+                                    <input type="number" class="form-control" id="primerNumero" name="primerNumero" value='0.00' required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="segundoNumero">Segundo Numero</label>
+                                    <input type="number" class="form-control" id="segundoNumero" name="segundoNumero" value='0.00' required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label for="resultado">Resultado</label>
+                                    <input type="number" class="form-control" id="resultado" name="resultado" value="0.00">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <button type="button" class="btn btn-primary" id="btnSumar" style="width: 100%;"><i class="fa fa-floppy-o" aria-hidden="true" ></i> Sumar</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <button type="button" class="btn btn-primary" id="btnRestar" style="width: 100%;"><i class="fa fa-floppy-o" aria-hidden="true"></i> Restar</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <button type="button" class="btn btn-primary" id="btnMultiplicar" style="width: 100%;"><i class="fa fa-floppy-o" aria-hidden="true"></i> Multiplicar</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <button type="button" class="btn btn-primary" id="btnDividir" style="width: 100%;"><i class="fa fa-floppy-o" aria-hidden="true"></i> Dividir</button>
+                                </div>
+                            </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="jquery-3.1.1.min.js"></script>
+</body>
+</html>

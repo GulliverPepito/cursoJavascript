@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso de Javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+            <div class="panel panel-primary">
+                <br>
+                <br>
+                <div class="panel-body">
+                    <ul class="chat">
+                        
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                   <form action="" id="formMensaje">
+                    <div class="input-group">
+                       
+                           <input id="texto" type="text" class="form-control input-sm" placeholder="Escribir Mensaje" />
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-warning btn-sm" id="btn-chat">
+                                Enviar</button>
+                        </span>  
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="jquery-3.1.1.min.js"></script>
+<script>
+
+    $(document).ready(function(){
+        $('#formMensaje').submit(function(evt)
+        {
+            evt.preventDefault();
+            var mensaje = $('#texto').val();
+            var chat = "<li class='right clearfix'><span class='chat-img pull-right'>";
+            chat += "<img src='http://placehold.it/50/FA6F57/fff&text=JT' alt='User Avatar' class='img-circle' />";
+            chat += " </span>";
+            chat += " <div class='chat-body clearfix'>";
+            chat += "<div class='header'>";
+            chat += "<small class=' text-muted'><span class='glyphicon glyphicon-time'></span></small>";
+            chat += "<strong class='pull-right primary-font'>Jonathan</strong>";
+            chat += "</div>";
+            chat += "<p>";
+            chat += mensaje + "</p>";
+            chat += "</div>";
+            chat += "</li>";
+            $('.chat').append(chat);
+            $('#texto').val('');
+            setTimeout(function(){respuesta(mensaje);}, 1000);
+        });
+    });
+    function respuesta(msj){
+        var mensaje = ''
+        switch(msj){
+            case 'hola' : mensaje = 'Hola humano! Buenos dias';
+                break;
+            case 'como estas?' : mensaje = 'Muy bien algo agotado pero solo soy una maquina.'
+                break;
+            case 'adios' : mensaje = 'Hasta pronto humano, te extrañare.';
+                break;
+            case 'cuentame algo' : mensaje = 'Mi espacio de memoria es muy corto para contarte algo.';
+                break;
+            case 'chiste' : mensaje = '¿Sabes cuál es el virus mas extendido del mundo?. El Sistema Windows. JAJAJJAJAJAJA XD';
+                break;
+            default : mensaje = 'No te entendi podrias repetirlo.';
+        }
+        var chat = "<li class='left clearfix'><span class='chat-img pull-right'>";
+            chat += "<img src='http://placehold.it/50/FA6F57/fff&text=JShttp://placehold.it/50/55C1E7/fff&text=JS' alt='User Avatar' class='img-circle' />";
+            chat += " </span>";
+            chat += " <div class='chat-body clearfix'>";
+            chat += "<div class='header'>";
+            chat += "<small class=' text-muted'><span class='glyphicon glyphicon-time'></span></small>";
+            chat += "<strong class='pull-right primary-font'>Jarvis</strong>";
+            chat += "</div>";
+            chat += "<p>";
+            chat += mensaje + "</p>";
+            chat += "</div>";
+            chat += "</li>";
+            $('.chat').append(chat);
+    }
+</script>
+</body>
+</html>
